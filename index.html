@@ -159,7 +159,9 @@
 
 <script>
 var x = document.getElementById("audio"); 
-
+var audio = function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
 function playaudio() { 
   x.play(); 
 } 
