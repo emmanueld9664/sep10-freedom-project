@@ -96,6 +96,7 @@
                     <div class="card">
                                 <div class="card-body">
                             <h5 class="card-title">The Spotify images.</h5>
+                                <h6>Here is an image representing how Spotify mixes new songs into the users playlist.</h6>
                             <img src="mzkrjyk74er31.jpg" alt="Spotify Example" width="275" height="325">
                         </div>
                     </div>
@@ -113,6 +114,7 @@
                                         <li>The advanced option: Have an A.I. automatically generate music, similarly to how Jukebox OpenAI extends music with A.I. More of a choice that can be done extremely well with future technology.</li>
                                     </ol>
                                </h6>
+                            <h5>Out of all these choices, I decided to go with option 2, as I feel it is something within my range of skill.</h5>
                         </div>
                     </div>
                 </div>
@@ -126,6 +128,7 @@
         <div class="row">
             <div class="w3-container w3-#2e72a1">
             </div>
+            <h5> In this final section, I will show you my solution in action. All you need to do is hit the button and a randomized (royalty free) song will play.</h5>
             <head>
     <style>
         .button {
@@ -147,10 +150,65 @@
 
 <button class="button button1">Play Random Song</button>
 
-<audio controls>
-  <source src="horse.ogg" type="audio/ogg">
-  <source src="horse.mp3" type="audio/mpeg">
+
+<audio id="blue">
+    <source src="blue.mp3" type="audio/mpeg">
 </audio>
+
+<audio id="cigar">
+    <source src="cigar.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="immigrant">
+    <source src="immigrant.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="monkey">
+    <source src="monkey.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="money">
+    <source src="money.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    var a1 = document.getElementById("blue"); 
+    var a2 = document.getElementById("cigar"); 
+    var a3 = document.getElementById("immigrant"); 
+    var a4 = document.getElementById("monkey"); 
+    var a5 = document.getElementById("money"); 
+    var x;
+
+    function playAudio() { 
+        var num = Math.floor(Math.random() * 5) + 1;
+        if(num == 1){
+            x = a1;
+            x.play();
+        }else if(num == 2){
+            x = a2;
+            x.play();
+        }else if(num == 3){
+            x = a3;
+            x.play();
+        }else if(num == 4){
+            x = a4;
+            x.play();
+        }else if(num == 5){
+            x = a5;
+            x.play();
+        }
+} 
+
+function pauseAudio() { 
+    x.pause(); 
+} 
+
+
+function resumeAudio() {
+    x.play();
+}
+</script>
+
 
 </body>
         </div>
