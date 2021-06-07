@@ -155,9 +155,20 @@
     <source src="bensound-happyrock.mp3" type="audio/mp3">
     <source src="bensound-ukulele.mp3" type="audio/mp3">
 </audio>
-    <button onclick="playAudio()" type="button">Play Audio</button>
-    <button onclick="pauseAudio()" type="button">Pause Audio</button> 
+    <button onclick="playaudio()" type="button">Play Audio</button>
+    <button onclick="pauseaudio()" type="button">Pause Audio</button> 
 
+<script>
+var x = document.getElementById("audio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
 
 </body>
         </div>
