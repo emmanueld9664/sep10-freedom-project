@@ -148,7 +148,7 @@
     </head>
 <body>
     
-<audio id="audio" data-duration="29">
+<audio id="audio">
     <source src="bensound-creativeminds.mp3" type="audio/mp3">
     <source src="bensound-goinghigher.mp3" type="audio/mp3">
     <source src="bensound-happyrock.mp3" type="audio/mp3">
@@ -158,12 +158,6 @@
     <button class="button button1" onclick="pauseaudio()" type="button">Pause Audio</button> 
 
 <script>
-var audio = $('#audio'),
-    totalTime = audio.attr('data-duration'),
-	startTime = Math.floor(Math.random() * totalTime);
-console.log(startTime);
-audio[0].currentTime = startTime; // No Chrome support at this point
-$(".ran i").prepend(startTime);
 
 function playaudio() { 
   x.play(); 
